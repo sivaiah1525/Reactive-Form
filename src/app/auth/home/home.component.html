@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row mt-3 justify-content-center">
+        <div class="col-md-4">
+            <h2>ALL USERS</h2>
+        </div>
+    </div>
+    <div class="row  p-3  justify-content-center" >
+        <div class="col-md-5" *ngFor='let x of localdata'>
+            <div class="card m-3" style="width:400px">
+                <img class="card-img-top pb-3" src="../../../assets/img3-large.jpg" alt="Card image" style="width:100%">
+                <div class="card-body pb-3">
+                    <p class="card-text"> Name : {{x.userName}}</p>
+                    <p class="card-text"> Age : {{x.age }}</p>
+                    <p class="card-text"> Maill : {{x.mailID}}</p>
+                </div>
+            </div>
+        </div>
+    </div>

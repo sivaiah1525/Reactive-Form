@@ -1,0 +1,27 @@
+<section class="formsection">
+    <form [formGroup]="myForm" (ngSubmit)="savedata(myForm.value)">
+        <div class="container">
+            <!-- Register  -->
+            <div>
+                <h1>LOGIN</h1>
+            </div>
+            <!-- email  -->
+            <div>
+                <label for="email"><b>email</b></label>
+                <input email type="email" placeholder="Enter Email" formControlName="email">
+                <span *ngIf="myForm.controls.email.invalid && myForm.controls.email.touched ">please Enter email</span>
+            </div>
+            <!-- Password  -->
+            <div>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="******" formControlName="password">
+                <span *ngIf="myForm.controls.password.invalid && myForm.controls.password.touched ">please Enter password</span>
+                <!-- <span *ngIf="myForm.controls.password.error.minLength">password must be 6 </span> -->
+            </div>
+            <!-- Register button  -->
+            <div>
+                <button title="submit" [disabled]="myForm.invalid" class="registerbtn">Login</button>
+            </div>
+        </div>
+    </form>
+</section>
